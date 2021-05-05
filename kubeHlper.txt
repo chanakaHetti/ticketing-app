@@ -1,0 +1,25 @@
+docker ps
+kubectl get node
+kubectl get deployment
+kubectl get all
+watch kubecl get pods
+kubectl get service
+
+#Get kubernetes pods
+kubectl get pods 
+
+#Finding a Pod’s Cluster IP
+kubectl get pod -o wide
+
+#Finding a Service’s IP
+kubectl get service --all-namespaces
+
+#Finding and Entering Pod Network Namespaces
+docker ps
+
+#skaffold add run
+skaffold dev --port-forward
+
+#Kubernetes create secret key
+kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdf
+kubectl get secrets
