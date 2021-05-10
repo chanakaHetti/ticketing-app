@@ -8,6 +8,9 @@ kubectl get service
 #Get kubernetes pods
 kubectl get pods 
 
+#manually delete a pod
+kubectl delete pod client-depl-6f464b6d54-4w82m
+
 #Finding a Pod’s Cluster IP
 kubectl get pod -o wide
 
@@ -23,3 +26,7 @@ skaffold dev --port-forward
 #Kubernetes create secret key
 kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdf
 kubectl get secrets
+
+#docker build new created image
+docker build -t cdileep40/client .
+docker push cdileep40/client 
