@@ -1,0 +1,18 @@
+
+# Push the all changes on Giyhub repo
+git add .
+git commit -m "message"
+git push origin branch-name
+
+# move to npm package include directory
+cd common
+
+# Update the version of npm package
+npm version patch 
+
+# create the new build for changes
+npm run build
+
+# publish all changes on NPM package
+npm publish
+
