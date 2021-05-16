@@ -1,0 +1,6 @@
+# redirec to the auth directory
+cd auth
+
+# install we created common npm package on auth folder
+npm i @ticketms/common
+
