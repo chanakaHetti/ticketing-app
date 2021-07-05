@@ -1,0 +1,62 @@
+# create the organization on npmjs.com
+login
+create the organization (free one is enough)
+
+# create the shared npm librabry to created organization
+mkdir common
+cd common
+npm init -y
+
+# added changes on package.json
+"name": "@ticketms/common" -> "organization-name/folder-name"
+
+# npm login
+usename -> npmjs.com username
+password -> npmjs.com password
+
+# first publish on npmjs.com
+npm publish --access public
+
+# added typescript config file (tsconfig.json)
+tsc --init
+
+# install typescript and cli delete package
+npm install typescript del-cli --save-dev
+
+# added wanted files
+# added wanted npm package
+
+# change tsconfig file (uncomment)
+"declaration": true
+"outDir": "./build"
+
+# typescript file to javascript files build
+tsc
+
+# Push the all changes on Giyhub repo
+git add .
+git commit -m "message"
+git push origin branch-name
+
+# move to npm package include directory
+cd common
+
+# Update the version of npm package
+npm version patch 
+
+# create the new build for changes
+npm run build
+
+# publish all changes on NPM package
+npm publish
+
+# short the execution code in package,json
+"scripts": {
+  "clean": "del ./build/*",
+  "build": "tsc",
+  "pub": "npm version patch && npm run build && npm publish"
+},
+
+# update the patch number, create the build, & publish
+npm run pub
+

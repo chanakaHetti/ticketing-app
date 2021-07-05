@@ -30,3 +30,7 @@ kubectl get secrets
 #docker build new created image
 docker build -t cdileep40/client .
 docker push cdileep40/client 
+
+#go inside the kubernetes pods
+kubectl get pods
+kubectl exec -it (pod name) sh
